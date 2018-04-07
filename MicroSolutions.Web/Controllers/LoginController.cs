@@ -50,13 +50,13 @@ namespace MicroSolutions.Web.Controllers
 		{
 			try
 			{
-				if (!WebSecurity.UserExists("pila")) WebSecurity.CreateUserAndAccount("pila", "abcABC123@@@");
+				if (!WebSecurity.UserExists("user1")) WebSecurity.CreateUserAndAccount("user1", "abcABC123@@@");
 				//if (!WebSecurity.UserExists("User")) WebSecurity.CreateUserAndAccount("User", "User@#123");
 				//if (!WebSecurity.UserExists("Audit")) WebSecurity.CreateUserAndAccount("Audit", "Audit@#123");
 				//Roles.CreateRole("administrator");
 				//Roles.CreateRole("user");
 				//Roles.CreateRole("audit");
-				Roles.AddUserToRole("pila", "administrator");
+				Roles.AddUserToRole("user1", "administrator");
 ;
 			}
 			catch (MembershipCreateUserException e)
