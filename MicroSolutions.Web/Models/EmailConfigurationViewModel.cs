@@ -11,21 +11,27 @@ namespace MicroSolutions.Web.Models
 		public virtual int Id { get; set; }
 
 		[Display(Name = "From email")]
+        [Required(ErrorMessage = "From email field is required.")]
 		public virtual string FromEmail { get; set; }
 
 		[Display(Name = "From email password")]
-		public virtual string FromEmailPassword { get; set; }
+        [Required(ErrorMessage = "From email password field is required.")]
+        public virtual string FromEmailPassword { get; set; }
 
 		[Display(Name = "To email")]
-		public virtual string ToEmail { get; set; }
+        [Required(ErrorMessage = "To email field is required.")]
+        public virtual string ToEmail { get; set; }
 
 		[Display(Name = "Warning period")]
-		public virtual int WarningPeriod { get; set; }
+        [Required(ErrorMessage = "Warning period field is required.")]
+        public virtual int WarningPeriod { get; set; }
 
 		[Display(Name = "Smtp address")]
-		public virtual string SmtpAddress { get; set; }
+        [Required(ErrorMessage = "Smtp address field is required.")]
+        public virtual string SmtpAddress { get; set; }
 
 		[Display(Name = "Port number")]
-		public virtual int PortNumber { get; set; }
+        [Required(ErrorMessage = "Port number field is required.")]
+        public virtual int PortNumber { get; set; }
 	}
 }

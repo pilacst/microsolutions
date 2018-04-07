@@ -10,13 +10,16 @@ namespace MicroSolutions.Web.Models
 		public virtual int Id { get; set; }
 
 		[Display(Name = "Customer name")]
+        [Required(ErrorMessage = "Customer name is required.")]
 		public virtual string CustomerName { get; set; }
 
 		[Display(Name = "Contact person name")]
-		public virtual string ContactPersonName { get; set; }
+        [Required(ErrorMessage = "Contact person name is required.")]
+        public virtual string ContactPersonName { get; set; }
 
 		[Display(Name = "Contact number")]
-		public virtual string ContactNumber { get; set; }
+        [Required(ErrorMessage = "Contact number is required.")]
+        public virtual string ContactNumber { get; set; }
 
 		[Display(Name = "Customer address")]
 		public virtual string Address { get; set; }
