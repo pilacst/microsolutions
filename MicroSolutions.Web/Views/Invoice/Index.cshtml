@@ -39,7 +39,7 @@
 									<td>@Html.DisplayTextFor(modelItem => item.InvoiceNumber)</td>
 									<td>@Html.DisplayTextFor(modelItem => item.InvoiceDate)</td>
 									<td>@Html.DisplayTextFor(modelItem => item.Customer.CustomerName)</td>
-									<td>
+									<td class="editor-options">
 										<a href="@Url.Action("Edit", "Invoice", new { item.Id })"><i class="fa fa-pencil-square-o"></i></a>
 										<a href="@Url.Action("ListPartsForInvoice", "Invoice", new { item.Id })"><i class="fa fa-info"></i></a>
 									</td>
