@@ -136,7 +136,10 @@ namespace MicroSolutions.Web.Controllers
 				var expirationPeriodList = db.ExpirationPeriod.ToList();
 				if (ModelState.IsValid)
 				{
-					var expirationPeriodModel = new ExpirationPeriod();
+                    if(expirationPeriod.ExpirationPeriodName == null)
+                        return Json(expirationPeriodList);
+
+                    var expirationPeriodModel = new ExpirationPeriod();
 					expirationPeriodModel.ExpirationPeriodName = expirationPeriod.ExpirationPeriodName;
 					expirationPeriodModel.ExpirationPeriodValue = expirationPeriod.ExpirationPeriodValue;
 					expirationPeriodModel.Status = true;
@@ -259,7 +262,10 @@ namespace MicroSolutions.Web.Controllers
 				var itemTypeList = db.ItemType.ToList();
 				if (ModelState.IsValid)
 				{
-					var itemTypeModel = new ItemType();
+                    if(itemType.ItemTypeName == null)
+                        return Json(itemTypeList);
+
+                    var itemTypeModel = new ItemType();
 					itemTypeModel.ItemTypeName = itemType.ItemTypeName;
 					itemTypeModel.Status = true;
 					itemTypeModel.UserName = WebSecurity.CurrentUserName;
@@ -380,7 +386,10 @@ namespace MicroSolutions.Web.Controllers
 				var vendorList = db.Vendors.ToList();
 				if (ModelState.IsValid)
 				{
-					var vendorModel = new Vendors();
+                    if(vendor.VenderName == null)
+                        return Json(vendorList);
+
+                    var vendorModel = new Vendors();
 					vendorModel.VenderName = vendor.VenderName;
 					vendorModel.Status = true;
 					vendorModel.UserName = WebSecurity.CurrentUserName;
@@ -495,7 +504,10 @@ namespace MicroSolutions.Web.Controllers
 				var supplierList = db.Supplier.ToList();
 				if (ModelState.IsValid)
 				{
-					var supplierModel = new Supplier();
+                    if(supplier.SupplierName == null)
+                        return Json(supplierList);
+
+                    var supplierModel = new Supplier();
 					supplierModel.SupplierName = supplier.SupplierName;
 					supplierModel.Status = true;
 					supplierModel.UserName = WebSecurity.CurrentUserName;
