@@ -1,0 +1,33 @@
+﻿@model IEnumerable<MicroSolutions.Data.Models.EmailSettings>
+
+@{
+	<table width="100%" class="table table-striped table-bordered table-hover" id="expiration-period-table">
+		<thead>
+			<tr>
+				<th>From email</th>
+				<th>From email password</th>
+				<th>Port number</th>
+				<th>Smtp address</th>
+				<th>To email</th>
+				<th>Warning period</th>
+				<th></th>
+			</tr>
+		</thead>
+		<tbody>
+			@foreach (var item in Model)
+			{
+				<tr class="odd gradeX">
+					<td>@item.FromEmail</td>
+					<td>@item.FromEmailPassword</td>
+					<td>@item.PortNumber</td>
+					<td>@item.SmtpAddress</td>
+					<td>@item.ToEmail</td>
+					<td>@item.WarningPeriod</td>
+					<td>
+						<a href="@Url.Action("ViewEmailConfigurations", "Settings", new { item.Id })"><i class="fa fa-pencil-square-o"></i></a>
+					</td>
+				</tr>
+			}
+		</tbody>
+	</table>
+}

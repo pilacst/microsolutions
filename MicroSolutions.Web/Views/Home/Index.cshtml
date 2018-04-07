@@ -1,0 +1,69 @@
+﻿@model MicroSolutions.Web.Models.HomeVieModel
+@{
+	ViewBag.Title = "Login";
+	Layout = "~/Views/Shared/_Layout.cshtml";
+}
+</br>
+<div class="row">
+	<div class="col-lg-3 col-md-6">
+		<div class="panel panel-primary">
+			<div class="panel-heading">
+				<div class="row">
+					<div class="col-xs-3">
+						<i class="fa fa-tasks fa-5x"></i>
+					</div>
+					<div class="col-xs-9 text-right">
+						<div class="huge">@Model.TotalInvoices</div>
+						<div>Number of total invoice</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="col-lg-3 col-md-6">
+		<div class="panel panel-green">
+			<div class="panel-heading">
+				<div class="row">
+					<div class="col-xs-3">
+						<i class="fa fa-tasks fa-5x"></i>
+					</div>
+					<div class="col-xs-9 text-right">
+						<div class="huge">@Model.TotalExpiredParts</div>
+						<div>Total expired part count</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="col-lg-3 col-md-6">
+		<div class="panel panel-yellow">
+			<div class="panel-heading">
+				<div class="row">
+					<div class="col-xs-3">
+						<i class="fa fa-tasks fa-5x"></i>
+					</div>
+					<div class="col-xs-9 text-right">
+						<div class="huge">@Model.TotalItemsExpiredWithinNextThreeMonths</div>
+						<div>Number of items to expire three months.</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="col-lg-3 col-md-6">
+		<div class="panel panel-red">
+			<div class="panel-heading">
+				<div class="row">
+					<div class="col-xs-3">
+						<i class="fa fa-tasks fa-5x"></i>
+					</div>
+					<div class="col-xs-9 text-right">
+						<div class="huge">@Model.TotalExpiredItemOnToday</div>
+						<div>Number of invoices expired today.</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- /.row -->

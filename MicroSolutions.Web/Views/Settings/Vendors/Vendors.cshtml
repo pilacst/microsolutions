@@ -1,0 +1,36 @@
+﻿@model IEnumerable<MicroSolutions.Data.Models.Vendors>
+
+@{
+   
+    <table width="100%" class="table table-striped table-bordered table-hover" id="vendors-table">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr class="odd gradeX">
+                    <td>@item.VenderName</td>
+                    <td>
+                        <a href="#" onclick="return editVendor('@item.Id')"><i class="fa fa-pencil-square-o"></i></a>
+                        <a href="#" onclick="return confirmDeleteVendor('@item.Id')"><i class="fa fa-trash-o" aria-hidden="true"></i></a>
+                    </td>
+                </tr>
+			}
+        </tbody>
+    </table>
+}
+
+
+<a href="#" onclick="return vendorAddModel()" class="btn btn-primary pull-right">Add new vendor</a>
+
+
+
+@Html.Partial("Vendors/_AddVendors", new MicroSolutions.Web.Models.VendorsViewModel())
+@Html.Partial("Vendors/_DeleteVendors", new MicroSolutions.Web.Models.VendorsViewModel())
+@Html.Partial("Vendors/_EditVendors", new MicroSolutions.Web.Models.VendorsViewModel())
+
+<script src="~/Content/controllers/Vendors.js"></script>

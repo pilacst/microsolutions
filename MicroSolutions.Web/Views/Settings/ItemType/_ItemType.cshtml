@@ -1,0 +1,72 @@
+﻿@model MicroSolutions.Web.Models.ItemTypeViewModel
+
+<!-- Modal -->
+<div class="modal fade" id="edit-item-type-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+	<div class="modal-dialog" role="document">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+				<h4 class="modal-title" id="myModalLabel">Edit item type</h4>
+			</div>
+			<div class="modal-body">
+				<input type="hidden" name="Id" id="ItemType-Id" />
+				<div class="form-group">
+					<label for="ItemType-Name">Item type item</label>
+					<input id="ItemType-Name" class="form-control" name="ItemTypeName" type="text" />
+				</div>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+				<button type="button" class="btn btn-primary" onclick="updateItemType()">Save changes</button>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+
+<div class="modal fade" id="delete-item-type-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+	<div class="modal-dialog" role="document">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+				<h4 class="modal-title" id="myModalLabel">Delete item type</h4>
+			</div>
+			<div class="modal-body">
+				<input type="hidden" name="Id" id="Delete-ItemType-Id" />
+				<fieldset disabled>
+					<div class="form-group">
+						<label for="ItemType-Name">Item type</label>
+						<input id="Delete-ItemType-Name" class="form-control" name="ItemTypeName" type="text" />
+					</div>
+				</fieldset>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+				<button type="button" class="btn btn-primary" onclick="deleteItemType()">Delete</button>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+<div class="modal fade" id="add-item-type-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+	<div class="modal-dialog" role="document">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+				<h4 class="modal-title" id="myModalLabel">Add new item type</h4>
+			</div>
+			<div class="modal-body">
+				<div class="form-group">
+					<label for="ItemType-Name">Item type</label>
+					<input id="Add-ItemType-Name" class="form-control" name="ItemTypeName" type="text" />
+				</div>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+				<button type="button" class="btn btn-primary" onclick="addItemType()">Save</button>
+			</div>
+		</div>
+	</div>
+</div>

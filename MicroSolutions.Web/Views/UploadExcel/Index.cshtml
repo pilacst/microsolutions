@@ -1,0 +1,40 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<h1>Upload Excel file.</h1>
+@{
+	if (TempData["Message"] != null && TempData["MessageType"] != null)
+	{
+		<div class="alert @TempData["MessageType"] alert-dismissable">
+			<button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+			@TempData["Message"].ToString()
+		</div>
+	}
+}
+
+@using (Html.BeginForm("UploadExcelFile", "UploadExcel", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+	<div class="row">
+		<div class="col-lg-12">
+			<div class="panel panel-default">
+				<div class="panel-heading">
+					<h5>Upload invoice and parts details.</h5>
+				</div>
+				<!-- /.panel-heading -->
+				<div class="panel-body">
+					<div class="form-group">
+						@Html.TextBox("file", "", new { type = "file" })
+					</div>
+					<div class="form-group">
+						<input type="submit" value="Upload" class="btn-primary" />
+					</div>
+				</div>
+				<!-- /.panel-body -->
+			</div>
+			<!-- /.panel -->
+		</div>
+		<!-- /.col-lg-12 -->
+	</div>
+}  

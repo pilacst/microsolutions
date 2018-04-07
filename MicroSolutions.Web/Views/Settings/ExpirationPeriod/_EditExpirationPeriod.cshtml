@@ -1,0 +1,85 @@
+﻿@model MicroSolutions.Web.Models.ExpirationPeriodViewModel
+
+<!-- Modal -->
+<div class="modal fade" id="edit-expiration-period-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+	<div class="modal-dialog" role="document">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+				<h4 class="modal-title" id="myModalLabel">Edit expiration period</h4>
+			</div>
+			<div class="modal-body">
+				<input type="hidden" name="Id" id="ExpirationPeriod-Id" />
+				<div class="form-group">
+					<label for="ExpirationPeriod-Name">Expiration period name</label>
+					<input id="ExpirationPeriod-Name" class="form-control" name="ExpirationPeriodName" type="text" />
+				</div>
+				<div class="form-group">
+					<label for="ExpirationPeriod-Value">Expiration period value (in months)</label>
+					<input id="ExpirationPeriod-Value" class="form-control" name="ExpirationPeriodValue" type="text" />
+				</div>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+				<button type="button" class="btn btn-primary" onclick="updateExpirationPeriod()">Save changes</button>
+
+			</div>
+		</div>
+	</div>
+</div>
+
+
+
+<div class="modal fade" id="delete-expiration-period-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+	<div class="modal-dialog" role="document">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+				<h4 class="modal-title" id="myModalLabel">Delete expiration period</h4>
+			</div>
+			<div class="modal-body">
+				<input type="hidden" name="Id" id="Delete-ExpirationPeriod-Id" />
+				<fieldset disabled>
+					<div class="form-group">
+						<label for="ExpirationPeriod-Name">Expiration period name</label>
+						<input id="Delete-ExpirationPeriod-Name" class="form-control" name="ExpirationPeriodName" type="text" />
+					</div>
+					<div class="form-group">
+						<label for="ExpirationPeriod-Value">Expiration period value (in months)</label>
+						<input id="Delete-ExpirationPeriod-Value" class="form-control" name="ExpirationPeriodValue" type="text" />
+					</div>
+				</fieldset>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+				<button type="button" class="btn btn-primary" onclick="deleteExpirationPeriod()">Delete</button>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+<div class="modal fade" id="add-expiration-period-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+	<div class="modal-dialog" role="document">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+				<h4 class="modal-title" id="myModalLabel">Add new expiration period</h4>
+			</div>
+			<div class="modal-body">
+				<div class="form-group">
+					<label for="ExpirationPeriod-Name">Expiration period name</label>
+					<input id="Add-ExpirationPeriod-Name" class="form-control" name="ExpirationPeriodName" type="text" />
+				</div>
+				<div class="form-group">
+					<label for="ExpirationPeriod-Value">Expiration period value (in months)</label>
+					<input id="Add-ExpirationPeriod-Value" class="form-control" name="ExpirationPeriodValue" type="text" />
+				</div>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+				<button type="button" class="btn btn-primary" onclick="addExpirationPeriod()">Save</button>
+			</div>
+		</div>
+	</div>
+</div>

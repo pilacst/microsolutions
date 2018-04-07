@@ -1,0 +1,31 @@
+﻿@model IEnumerable<MicroSolutions.Data.Models.Supplier>
+
+@{
+
+	<table width="100%" class="table table-striped table-bordered table-hover" id="supplier-table">
+		<thead>
+			<tr>
+				<th>Name</th>
+				<th></th>
+			</tr>
+		</thead>
+		<tbody>
+			@foreach (var item in Model)
+			{
+				<tr class="odd gradeX">
+					<td>@item.SupplierName</td>
+					<td>
+						<a href="#" onclick="return editSupplier('@item.Id')"><i class="fa fa-pencil-square-o"></i></a>
+						<a href="#" onclick="return confirmDeleteSupplier('@item.Id')"><i class="fa fa-trash-o" aria-hidden="true"></i></a>
+					</td>
+				</tr>
+			}
+		</tbody>
+	</table>
+}
+
+<a href="#" onclick="return SupplierAddModel()" class="btn btn-primary pull-right">Add new supplier</a>
+
+@Html.Partial("Supplier/_Supplier", new MicroSolutions.Web.Models.SupplierViewModel())
+
+<script src="~/Content/Controllers/Supplier.js"></script>

@@ -1,0 +1,103 @@
+﻿@model IEnumerable<MicroSolutions.Web.Models.PartsForInvoiceViewModel>
+
+@{
+    ViewBag.Title = "EditPartsForInvoice";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Parts for invoice</h2>
+
+@{
+	if (TempData["Message"] != null && TempData["MessageType"] != null)
+	{
+		<div class="alert @TempData["MessageType"] alert-dismissable">
+			<button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+			@TempData["Message"].ToString()
+		</div>
+	}
+}
+<div class="row">
+	<div class="col-lg-12">
+		<div class="panel panel-default">
+			<div class="panel-heading">
+				<h5>Parts</h5>
+			</div>
+			<!-- /.panel-heading -->
+			<div class="panel-body">
+				@using (Html.BeginForm())
+				{
+					@Html.AntiForgeryToken()
+
+					<div class="form-horizontal">
+						@Html.ValidationSummary(true, "", new { @class = "text-danger" })
+						<div class="form-group">
+							<table width="100%" class="table table-striped table-bordered table-hover" id="invoice-parts">
+								<thead>
+									<tr>
+										<th>Item type</th>
+										<th>Part numbers</th>
+										<th>Vendor</th>
+										<th>Serial number</th>
+										<th>Quantity</th>
+										<th>Supplier</th>
+										<th>Description</th>
+										<th>Expiration period</th>
+										<th>Starting date</th>
+										<th>End dates</th>
+										<th></th>
+									</tr>
+								</thead>
+								<tbody>
+									@foreach (var item in Model)
+									{
+										<tr>
+											<td>
+												@Html.DisplayTextFor(model => item.ItemType.ItemTypeName)
+											</td>
+											<td>
+													@Html.DisplayTextFor(model => item.PartNumber)
+											</td>
+											<td>
+													@Html.DisplayTextFor(model => item.Vendor.VenderName)
+											</td>
+											<td>
+													@Html.DisplayTextFor(model => item.SerialNumber)
+											</td>
+											<td>
+													@Html.DisplayTextFor(model => item.Quantity)
+											</td>
+											<td>
+													@Html.DisplayTextFor(model => item.Supplier.SupplierName)
+											</td>
+											<td>
+													@Html.DisplayTextFor(model => item.Description)
+											</td>
+											<td>
+													@Html.DisplayTextFor(model => item.ExpirationPeriod.ExpirationPeriodName)
+											</td>
+											<td>
+													@Html.DisplayTextFor(model => item.StartingDate)
+											</td>
+											<td>
+													@Html.DisplayTextFor(model => item.EndDate)
+											</td>
+											<td>
+												<a href="@Url.Action("EditPart", "Invoice", new { item.Id })"><i class="fa fa-pencil-square-o"></i></a>
+											</td>
+										</tr>
+									}
+								</tbody>
+							</table>
+						</div>
+					</div>
+				}
+				@*<div class="form-group">
+					<a href="@Url.Action("AddPartToInvoice", "Invoice")" class="btn btn-primary pull-right">Add new part</a>
+				</div>*@
+			</div>
+			<!-- /.panel-body -->
+		</div>
+		<!-- /.panel -->
+	</div>
+	<!-- /.col-lg-12 -->
+</div>

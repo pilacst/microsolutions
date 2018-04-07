@@ -1,0 +1,30 @@
+﻿@model IEnumerable<MicroSolutions.Data.Models.ItemType>
+
+@{
+    <table width="100%" class="table table-striped table-bordered table-hover" id="item-type-table">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr class="odd gradeX">
+                    <td>@item.ItemTypeName</td>
+                    <td>
+						<a href="#" onclick="return editItemType('@item.Id')"><i class="fa fa-pencil-square-o"></i></a>
+						<a href="#" onclick="return confirmDeleteItemType('@item.Id')"><i class="fa fa-trash-o" aria-hidden="true"></i></a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+
+<a href="#" onclick="return ItemTypeAddModel()" class="btn btn-primary pull-right">Add new item type</a>
+
+
+@Html.Partial("ItemType/_ItemType", new MicroSolutions.Web.Models.ItemTypeViewModel())
+<script src="~/Content/Controllers/ItemType.js"></script>

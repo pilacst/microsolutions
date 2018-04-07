@@ -1,0 +1,10 @@
+Alias,Link,IsPermanent
+Alias1,/en-us/profile/register,TRUE
+Alias2,https://www.MyWebsite.com,FALSE
+Alias3,service/return-policy,FALSE
+,privacy-policy,FALSE
+Alias5,about-us,TRUE
+Alias6,service/delivery,TRUE
+Alias7,1000,TRUE
+Alias8,80202,TRUE
+Alias8,/en-us/profile/register,TRUE

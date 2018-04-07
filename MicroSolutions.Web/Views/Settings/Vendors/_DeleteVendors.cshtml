@@ -1,0 +1,25 @@
+﻿@model MicroSolutions.Web.Models.VendorsViewModel
+
+<div class="modal fade" id="delete-vendor-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+	<div class="modal-dialog" role="document">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+				<h4 class="modal-title" id="myModalLabel">Delete vendor</h4>
+			</div>
+			<div class="modal-body">
+				<input type="hidden" name="Id" id="Delete-Vendor-Id" />
+				<fieldset disabled>
+					<div class="form-group">
+						<label for="Vendor-Name">Vendor name</label>
+						<input id="Delete-Vendor-Name" class="form-control" name="VendorName" type="text" />
+					</div>
+					</fieldset>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+				<button type="button" class="btn btn-primary" onclick="deleteVendor()">Delete</button>
+			</div>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,72 @@
+﻿@model MicroSolutions.Web.Models.SupplierViewModel
+
+<!-- Modal -->
+<div class="modal fade" id="edit-supplier-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+	<div class="modal-dialog" role="document">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+				<h4 class="modal-title" id="myModalLabel">Edit supplier</h4>
+			</div>
+			<div class="modal-body">
+				<input type="hidden" name="Id" id="Edit-Supplier-Id" />
+				<div class="form-group">
+					<label for="Supplier-Name">Item type item</label>
+					<input id="Edit-Supplier-Name" class="form-control" name="SupplierName" type="text" />
+				</div>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+				<button type="button" class="btn btn-primary" onclick="updateSupplier()">Save changes</button>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+
+<div class="modal fade" id="delete-supplier-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+	<div class="modal-dialog" role="document">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+				<h4 class="modal-title" id="myModalLabel">Delete supplier</h4>
+			</div>
+			<div class="modal-body">
+				<input type="hidden" name="Id" id="Delete-Supplier-Id" />
+				<fieldset disabled>
+					<div class="form-group">
+						<label for="Supplier-Name">Item type</label>
+						<input id="Delete-Supplier-Name" class="form-control" name="SupplierName" type="text" />
+					</div>
+				</fieldset>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+				<button type="button" class="btn btn-primary" onclick="deleteSupplier()">Delete</button>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+<div class="modal fade" id="add-supplier-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+	<div class="modal-dialog" role="document">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+				<h4 class="modal-title" id="myModalLabel">Add new supplier</h4>
+			</div>
+			<div class="modal-body">
+				<div class="form-group">
+					<label for="Supplier-Name">Supplier</label>
+					<input id="Add-Supplier-Name" class="form-control" name="SupplierName" type="text" />
+				</div>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+				<button type="button" class="btn btn-primary" onclick="addSupplier()">Save</button>
+			</div>
+		</div>
+	</div>
+</div>

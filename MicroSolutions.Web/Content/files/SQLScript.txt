@@ -1,0 +1,99 @@
+﻿INSERT INTO [Customer]
+           ([CustomerName] ,[ContactPersonName] ,[ContactNumber] ,[Address] ,[Memorandum] ,[Status] ,[UserName] ,[ModifiedDate])
+     VALUES
+           ('N/A' ,null ,null ,null ,null ,'true' ,null ,GETDATE ( ))
+GO
+
+
+
+INSERT INTO [ExpirationPeriod]
+           ([ExpirationPeriodName] ,[ExpirationPeriodValue] ,[Status] ,[UserName] ,[ModifiedDate])
+     VALUES
+           ('N/A' ,0 ,'true' ,null ,GETDATE())
+GO
+
+
+INSERT INTO [ItemType]
+           ([ItemTypeName] ,[Status] ,[UserName] ,[ModifiedDate])
+     VALUES
+           ('N/A' ,'true' ,null ,GETDATE())
+GO
+
+
+
+INSERT INTO [Supplier]
+           ([SupplierName] ,[Status] ,[UserName] ,[ModifiedDate])
+     VALUES
+           ('N/A' ,'true' ,null ,GETDATE())
+GO
+
+
+
+INSERT INTO [Vendors]
+           ([VenderName] ,[Status] ,[UserName] ,[ModifiedDate])
+     VALUES
+           ('N/A' ,'true' ,null ,GETDATE())
+GO
+
+
+INSERT INTO [dbo].[UserProfile]
+           ([UserName])
+     VALUES
+           ('microsolutions')
+GO
+
+INSERT INTO [dbo].[webpages_Roles]
+           ([RoleName])
+     VALUES
+           ('Administrator')
+
+INSERT INTO [dbo].[webpages_Roles]
+           ([RoleName])
+     VALUES
+           ('Host')
+
+INSERT INTO [dbo].[webpages_Roles]
+           ([RoleName])
+     VALUES
+           ('RegisteredUser')
+
+INSERT INTO [dbo].[webpages_Membership]
+           ([UserId]
+           ,[CreateDate]
+           ,[ConfirmationToken]
+           ,[IsConfirmed]
+           ,[LastPasswordFailureDate]
+           ,[PasswordFailuresSinceLastSuccess]
+           ,[Password]
+           ,[PasswordChangedDate]
+           ,[PasswordSalt]
+           ,[PasswordVerificationToken]
+           ,[PasswordVerificationTokenExpirationDate])
+     VALUES
+           (1
+           ,GETDATE()
+           ,NULL
+           ,1
+           ,NULL
+           ,0
+           ,'AHablnwmHFXd1R8Me3ea1eKDJPFmKMkbEk2s/Mz+IeZboUrbodgBb47JfcrSBl9KqA=='
+           ,GETDATE()
+           ,''
+           ,NULL
+           ,NULL)
+GO
+
+INSERT INTO [webpages_UsersInRoles]
+           ([UserId]
+           ,[RoleId])
+     VALUES
+           (1
+           ,3)
+
+
+INSERT INTO [webpages_UsersInRoles]
+           ([UserId]
+           ,[RoleId])
+     VALUES
+           (1
+           ,2)

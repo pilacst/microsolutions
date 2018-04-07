@@ -1,0 +1,78 @@
+﻿@model MicroSolutions.Web.Models.InvoiceViewModel
+
+@{
+	ViewBag.Title = "Add";
+	Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Add invoice</h2>
+
+<div class="col-md-12">
+	<div class="col-md-12">
+		<div class="panel panel-default">
+			<div class="panel-heading">
+				<h5>Invoice list</h5>
+			</div>
+			<!-- /.panel-heading -->
+			<div class="panel-body">
+				@using (Html.BeginForm())
+				{
+					@Html.AntiForgeryToken()
+
+					<div class="form-horizontal">
+						@Html.ValidationSummary(true, "", new { @class = "text-danger" })
+						@Html.HiddenFor(model => model.Id)
+						<div class="form-group">
+							@Html.LabelFor(model => model.InvoiceNumber, htmlAttributes: new { @class = "control-label col-md-2" })
+							<div class="col-md-3">
+								@Html.EditorFor(model => model.InvoiceNumber, new { htmlAttributes = new { @class = "form-control" } })
+								@Html.ValidationMessageFor(model => model.InvoiceNumber, "", new { @class = "text-danger" })
+							</div>
+						</div>
+
+						<div class="form-group">
+							@Html.LabelFor(model => model.InvoiceDate, htmlAttributes: new { @class = "control-label col-md-2" })
+							<div class="col-md-3">
+								@Html.EditorFor(model => model.InvoiceDate, new { htmlAttributes = new { @class = "form-control" } })
+								@Html.ValidationMessageFor(model => model.InvoiceDate, "", new { @class = "text-danger" })
+							</div>
+						</div>
+
+						<div class="form-group">
+							@Html.LabelFor(model => model.CustomerId, "CustomerId", htmlAttributes: new { @class = "control-label col-md-2" })
+							<div class="col-md-3">
+								@Html.DropDownListFor(model => model.Customer.Id, (SelectList)ViewBag.CustomerList, new { @class = "select2_single form-control" })
+								@Html.ValidationMessageFor(model => model.CustomerId, "", new { @class = "text-danger" })
+							</div>
+						</div>
+
+						<div class="form-group">
+							@Html.Label("Is active", htmlAttributes: new { @class = "control-label col-md-2" })
+							<div class="col-md-3">
+								@Html.CheckBoxFor(model => model.Status)
+								@Html.ValidationMessageFor(model => model.Status, "", new { @class = "text-danger" })
+							</div>
+						</div>
+
+						<div class="form-group">
+							<div class="col-md-offset-2 col-md-10">
+								<input type="submit" value="Update" class="btn btn-primary pull-right" />
+							</div>
+						</div>
+					</div>
+				}
+			</div>
+			<!-- /.panel-body -->
+		</div>
+		<!-- /.panel -->
+	</div>
+	<!-- /.col-lg-12 -->
+</div>
+
+<script>
+	function addNewItem() {
+		//$('#parts-for-invoice').append($('<div> new div </div>'));
+		$('#add-parts-for-invoice-modal').modal('show');
+	}
+</script>
+<script src="~/Content/Controllers/Invoice.js"></script>

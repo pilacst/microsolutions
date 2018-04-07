@@ -1,0 +1,128 @@
+﻿@model IEnumerable<MicroSolutions.Web.Models.RegisteredUsersViewModel>
+@{
+    ViewBag.Title = "Registered users";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+<div class="row">
+	<div class="col-lg-12">
+		<div class="panel panel-default">
+			<div class="panel-heading">
+				Registered users
+			</div>
+			<!-- /.panel-heading -->
+			<div class="panel-body">
+				<table width="100%" class="table table-striped table-bordered table-hover" id="registered-users">
+					<thead>
+						<tr>
+							<th style="display:none">User Id</th>
+							<th>User name</th>
+							<th>User role</th>
+							<th>Is active user</th>
+							<th>User created date</th>
+							<th>User last modified date</th>
+							<th></th>
+						</tr>
+					</thead>
+					<tbody>				
+					@foreach (var item in Model)
+					{
+						<tr class="odd gradeX">
+							<td style="display:none">@Html.DisplayTextFor(modelItem => item.UserId)</td>
+							<td>@Html.DisplayTextFor(modelItem => item.UserName)</td>
+							<td>@Html.DisplayTextFor(modelItem => item.UserRole)</td>
+							<td>@Html.DisplayTextFor(modelItem => item.IsActiveUser)</td>
+							<td>@Html.DisplayTextFor(modelItem => item.CreatedDate)</td>
+							<td>@Html.DisplayTextFor(modelItem => item.ModifiedDate)</td>
+							<td>
+								<a href="#" onclick='return EditUser(@item.UserId)'><i class="fa fa-pencil-square-o"></i></a>
+							</td>
+						</tr>
+					}
+					</tbody>
+				</table>
+			</div>
+			<!-- /.panel-body -->
+		</div>
+		<!-- /.panel -->
+		<a href="#" onclick='return AddUser()' class="btn btn-primary pull-right"><i class="fa fa-user fa-fw"></i>Add new user</a>
+	</div>
+	<!-- /.col-lg-12 -->
+</div>
+<!-- /.row -->
+
+
+<div class="modal fade" id="edit-registered-users-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+	<div class="modal-dialog" role="document">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+				<h4 class="modal-title" id="myModalLabel">Edit user</h4>
+			</div>
+			<div class="modal-body">
+				<input type="hidden" name="Id" id="user-Id" />
+				<fieldset disabled>
+					<div class="form-group">
+						<label for="UserName">User name: </label>
+						<input id="Edit-User-Name" class="form-control" type="text" name="UserName" />
+					</div>
+				</fieldset>
+				<div class="form-group">
+					<label for="UserRole">User role: </label>
+					<select id="User-Role-select" class="form-control">
+						<option value="Host">Host</option>
+						<option value="Administrator">Administrator</option>
+						<option value="RegisteredUser">Registered user</option>
+					</select>
+				</div>
+				<div class="form-group">
+					<label class="checkbox-inline">
+						<input type="checkbox" id="active-user">Is active user
+					</label>
+				</div>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+				<button type="button" class="btn btn-primary" onclick="UpdateUser();">Update</button>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+<div class="modal fade" id="add-new-user-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+	<div class="modal-dialog" role="document">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+				<h4 class="modal-title" id="myModalLabel">Add user</h4>
+				<div id="result-message"></div>
+			</div>
+			<div class="modal-body">
+				<div class="form-group">
+					<label for="UserName">User name: </label>
+					<input id="Add-User-Name" class="form-control" type="text" name="UserName" />
+				</div>
+				<div class="form-group">
+					<label for="Password">Password: </label>
+					<input id="Add-User-Password" class="form-control" type="text" name="Password" />
+				</div>
+				<div class="form-group">
+					<label for="UserRole">User role: </label>
+					<select id="User-Role-select" class="form-control">
+						<option value="Host">Host</option>
+						<option value="Administrator">Administrator</option>
+						<option value="RegisteredUser">Registered user</option>
+					</select>
+				</div>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+				<button type="button" class="btn btn-primary" onclick="SaveUser();">Save</button>
+			</div>
+		</div>
+	</div>
+</div>
+
+<script src="~/Content/Controllers/RegisterUser.js"></script>

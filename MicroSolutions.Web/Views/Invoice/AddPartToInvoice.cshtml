@@ -1,0 +1,86 @@
+﻿@model MicroSolutions.Web.Models.PartsForInvoiceViewModel
+
+
+@{
+	ViewBag.Title = "Add Part";
+	Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>EditPart</h2>
+
+<div class="col-md-12">
+	<div class="col-md-12">
+		<div class="panel panel-default">
+			<div class="panel-heading">
+				<h5>Invoice list</h5>
+			</div>
+			<!-- /.panel-heading -->
+			<div class="panel-body">
+				@using (Html.BeginForm())
+				{
+					@Html.AntiForgeryToken()
+					@Html.HiddenFor(model => model.Id)
+					
+					<div class="form-horizontal">
+						@Html.ValidationSummary(true, "", new { @class = "text-danger" })
+						<div class="form-group col-md-12">
+							<label for="Vendor">Vendor: </label>
+							@Html.DropDownListFor(model => model.Vendor.Id, (SelectList)ViewBag.VendorList, new { @class = "select2_single form-control col-md-6", @id = "vendor-id" })
+						</div>
+						<div class="form-group col-md-12">
+							<label for="Item-type">Item type: </label>
+							@Html.DropDownListFor(model => model.ItemType.Id, (SelectList)ViewBag.ItemTypeList, new { @class = "select2_single form-control col-md-6", @id = "item-type-id" })
+							@Html.ValidationMessageFor(model => model.ItemType.Id)
+						</div>
+						<div class="form-group col-md-12">
+							@Html.LabelFor(model => model.PartNumber)
+							@Html.TextBoxFor(model => model.PartNumber, null, new { @class = "form-control col-md-6", @id = "part-number-value" })
+							@Html.ValidationMessageFor(model => model.PartNumber)
+						</div>
+						<div class="form-group col-md-12">
+							@Html.LabelFor(model => model.Quantity)
+							@Html.TextBoxFor(model => model.Quantity, null, new { @class = "form-control col-md-6", @id = "quantity-value" })
+							@Html.ValidationMessageFor(model => model.Quantity)
+						</div>
+						<div class="form-group col-md-12">
+							@Html.LabelFor(model => model.SerialNumber)
+							@Html.TextAreaFor(model => model.SerialNumber, htmlAttributes: new { @class = "form-control col-md-6", @id = "serial-numbers-value" })
+							@Html.ValidationMessageFor(model => model.SerialNumber)
+						</div>
+						<div class="form-group col-md-12">
+							<label for="UserRole">Supplier: </label>
+							@Html.DropDownListFor(model => model.Supplier.Id, (SelectList)ViewBag.SupplierList, new { @class = "select2_single form-control col-md-6", @id = "supplier-id" })
+						</div>
+						<div class="form-group col-md-12">
+							@Html.LabelFor(model => model.Description)
+							@Html.TextAreaFor(model => model.Description, htmlAttributes: new { @class = "form-control col-md-6", @id = "part-description-value" })
+							@Html.ValidationMessageFor(model => model.Description)
+						</div>
+						<div class="form-group col-md-12">
+							<label for="UserRole">Expiration period: </label>
+							@Html.DropDownListFor(model => model.ExpirationPeriod.Id, (SelectList)ViewBag.ExpirationPeriodList, new { @class = "select2_single form-control col-md-6", @id = "expiration-period-id" })
+						</div>
+						<div class="form-group  col-md-12">
+							@Html.LabelFor(model => model.StartingDate)
+							@Html.TextBoxFor(model => model.StartingDate, null, new { @class = "form-control col-md-6", @id = "start-date-value", placeholder = "dd/MM/yyyy"})
+							@Html.ValidationMessageFor(model => model.StartingDate)
+						</div>
+						<div class="form-group col-md-12">
+							@Html.LabelFor(model => model.EndDate)
+							@Html.TextBoxFor(model => model.EndDate, null, new { @class = "form-control col-md-6", @id = "end-date-value", placeholder = "dd/MM/yyyy" })
+							@Html.ValidationMessageFor(model => model.EndDate)
+						</div>
+						<div class="form-group">
+							<div class="col-md-offset-2 col-md-10">
+								<input type="submit" value="Update" class="btn btn-primary pull-right" />
+							</div>
+						</div>
+					</div>
+				}
+			</div>
+			<!-- /.panel-body -->
+		</div>
+		<!-- /.panel -->
+	</div>
+	<!-- /.col-lg-12 -->
+</div>

@@ -1,0 +1,69 @@
+﻿@model MicroSolutions.Web.Models.SettingsViewModel
+
+@{
+	ViewBag.Title = "Index";
+	Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<div class="panel panel-default">
+	<div class="panel-heading">
+		<h2>Settings</h2>
+	</div>
+	<!-- /.panel-heading -->
+	<div class="panel-body">
+		<!-- Nav tabs -->
+		<ul class="nav nav-tabs" role="tablist" id="settings-tab-view">
+			<li role="presentation" class="active">
+				<a href="#expiration-period" aria-controls="expiration-period" role="tab" data-toggle="tab">Expiration period</a>
+			</li>
+			<li role="presentation">
+				<a href="#item-type" aria-controls="item-type" role="tab" data-toggle="tab">Item types</a>
+			</li>
+			<li role="presentation">
+				<a href="#vendors" aria-controls="vendors" role="tab" data-toggle="tab">Vendors</a>
+			</li>
+			<li role="presentation">
+				<a href="#Supplier" aria-controls="Supplier" role="tab" data-toggle="tab">Supplier</a>
+			</li>
+			<li role="presentation">
+				<a href="#EmailSetting" aria-controls="EmailSetting" role="tab" data-toggle="tab">Email settings</a>
+			</li>
+		</ul>
+		<!-- Tab panes -->
+		<div class="tab-content">
+			<div role="tabpanel" class="tab-pane active" id="expiration-period">
+				<h4>Expiration period</h4>
+				<p>
+					@Html.Partial("~/Views/Settings/ExpirationPeriod/ExpirationPeriod.cshtml", Model.ExpirationPeriod)
+				</p>
+			</div>
+			<div role="tabpanel" class="tab-pane" id="item-type">
+				<h4>Item types</h4>
+				<p>
+					@Html.Partial("~/Views/Settings/ItemType/ItemType.cshtml", Model.ItemType)
+				</p>
+			</div>
+			<div role="tabpanel" class="tab-pane" id="vendors">
+				<h4>Vendors</h4>
+				<p>
+					@Html.Partial("~/Views/Settings/Vendors/Vendors.cshtml", Model.Vendors)
+				</p>
+			</div>
+			<div role="tabpanel" class="tab-pane" id="Supplier">
+				<h4>Supplier</h4>
+				<p>
+					@Html.Partial("~/Views/Settings/Supplier/Supplier.cshtml", Model.Supplier)
+				</p>
+			</div>
+			<div role="tabpanel" class="tab-pane" id="EmailSetting">
+				<h4>Email settings</h4>
+				<p>
+					@Html.Partial("~/Views/Settings/EmailAlert/EmailAlertSetting.cshtml", Model.EmailSettings)
+				</p>
+			</div>
+		</div>
+	</div>
+	<!-- /.panel-body -->
+</div>
+<!-- /.panel -->

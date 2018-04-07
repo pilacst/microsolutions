@@ -1,0 +1,1 @@
+2018-02-04 00:04:49.3611|INFO|MicroSolutions.Web.Controllers.HomeController|Sample informational message
