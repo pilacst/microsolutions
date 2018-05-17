@@ -46,12 +46,12 @@
 				</div>
 				<div class="form-group col-sm-6">
 					@Html.LabelFor(model => model.StartingDate)
-					@Html.TextBoxFor(model => model.StartingDate, null, new { @class = "form-control", @id="start-date-value"})
+					@Html.TextBoxFor(model => model.StartingDate, null, new { @class = "form-control", @placeholder = "dd/MM/yyyy", @id ="start-date-value"})
 					@Html.ValidationMessageFor(model => model.StartingDate)
 				</div>
 				<div class="form-group col-sm-6">
 					@Html.LabelFor(model => model.EndDate)
-					@Html.TextBoxFor(model => model.EndDate, null, new { @class = "form-control", @id="end-date-value" })
+					@Html.TextBoxFor(model => model.EndDate, null, new { @class = "form-control", @placeholder = "dd/MM/yyyy", @id ="end-date-value" })
 					@Html.ValidationMessageFor(model => model.EndDate)
 				</div>
 			</div>

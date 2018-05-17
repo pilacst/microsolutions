@@ -1,26 +1,6 @@
-2018-02-14 10:45:48.0987|ERROR|MicroSolutions.Web.Controllers.UploadExcelController|Exception occurred in uploading excelInput string was not in a correct format.
-2018-02-14 10:45:48.2067|ERROR|MicroSolutions.Web.Controllers.UploadExcelController|Exception occurred in uploading excelInput string was not in a correct format.
-2018-02-14 10:45:48.2387|ERROR|MicroSolutions.Web.Controllers.UploadExcelController|Exception occurred in uploading excelInput string was not in a correct format.
-2018-02-14 10:47:08.8283|ERROR|MicroSolutions.Web.Controllers.UploadExcelController|Exception occurred in uploading excelInput string was not in a correct format.
-2018-02-14 10:47:08.8723|ERROR|MicroSolutions.Web.Controllers.UploadExcelController|Exception occurred in uploading excelInput string was not in a correct format.
-2018-02-14 10:47:08.8963|ERROR|MicroSolutions.Web.Controllers.UploadExcelController|Exception occurred in uploading excelInput string was not in a correct format.
-2018-02-14 10:48:43.0760|ERROR|MicroSolutions.Web.Controllers.UploadExcelController|Exception occurred in uploading excelInput string was not in a correct format.
-2018-02-14 10:48:43.1080|ERROR|MicroSolutions.Web.Controllers.UploadExcelController|Exception occurred in uploading excelInput string was not in a correct format.
-2018-02-14 10:48:43.1400|ERROR|MicroSolutions.Web.Controllers.UploadExcelController|Exception occurred in uploading excelInput string was not in a correct format.
-2018-02-14 10:49:43.8176|ERROR|MicroSolutions.Web.Controllers.UploadExcelController|Exception occurred in uploading excelInput string was not in a correct format.
-2018-02-14 10:49:43.8436|ERROR|MicroSolutions.Web.Controllers.UploadExcelController|Exception occurred in uploading excelInput string was not in a correct format.
-2018-02-14 10:49:43.8666|ERROR|MicroSolutions.Web.Controllers.UploadExcelController|Exception occurred in uploading excelInput string was not in a correct format.
-2018-02-14 10:53:56.9448|ERROR|MicroSolutions.Web.Controllers.UploadExcelController|Exception occurred in uploading excel row Id : 109 : Input string was not in a correct format.
-2018-02-14 10:53:56.9988|ERROR|MicroSolutions.Web.Controllers.UploadExcelController|Exception occurred in uploading excelInput string was not in a correct format.
-2018-02-14 10:53:57.0218|ERROR|MicroSolutions.Web.Controllers.UploadExcelController|Exception occurred in uploading excelInput string was not in a correct format.
-2018-02-14 10:56:33.3406|ERROR|MicroSolutions.Web.Controllers.UploadExcelController|Exception occurred in uploading excel row Id : 548 : Input string was not in a correct format.
-2018-02-14 10:56:33.3846|ERROR|MicroSolutions.Web.Controllers.UploadExcelController|Exception occurred in uploading excelInput string was not in a correct format.
-2018-02-14 10:56:33.4206|ERROR|MicroSolutions.Web.Controllers.UploadExcelController|Exception occurred in uploading excelInput string was not in a correct format.
-2018-02-14 11:11:43.1892|ERROR|MicroSolutions.Web.Controllers.UploadExcelController|Exception occurred in uploading excel row Id : 732 : Input string was not in a correct format.
-2018-02-14 11:11:43.2132|ERROR|MicroSolutions.Web.Controllers.UploadExcelController|Exception occurred in uploading excelInput string was not in a correct format.
-2018-02-14 11:11:43.2372|ERROR|MicroSolutions.Web.Controllers.UploadExcelController|Exception occurred in uploading excelInput string was not in a correct format.
-2018-02-14 11:13:39.0605|ERROR|MicroSolutions.Web.Controllers.UploadExcelController|Exception occurred in uploading excel row Id : 778 : Input string was not in a correct format.
-2018-02-14 11:13:39.0806|ERROR|MicroSolutions.Web.Controllers.UploadExcelController|Exception occurred in uploading excelInput string was not in a correct format.
-2018-02-14 11:13:39.1045|ERROR|MicroSolutions.Web.Controllers.UploadExcelController|Exception occurred in uploading excelInput string was not in a correct format.
-2018-03-11 09:22:11.4052|ERROR|MicroSolutions.Task.ImportDataForEmailAlert.SendEmail|Exception occurred in Send email task: Object reference not set to an instance of an object.
-2018-03-11 09:22:11.4282|ERROR|MicroSolutions.Task.ImportDataForEmailAlert.UpdateNotificationData|Exception occurred in update notification table task Object reference not set to an instance of an object.
+2018-04-03 21:05:41.4134|ERROR|MicroSolutions.Task.ImportDataForEmailAlert.SendEmail|Exception occurred in Send email task: Object reference not set to an instance of an object.
+2018-04-03 21:05:41.4214|ERROR|MicroSolutions.Task.ImportDataForEmailAlert.UpdateNotificationData|Exception occurred in update notification table task Object reference not set to an instance of an object.
+2018-04-03 21:15:29.0740|ERROR|MicroSolutions.Task.ImportDataForEmailAlert.SendEmail|Exception occurred in Send email task: Object reference not set to an instance of an object.
+2018-04-03 21:15:29.0740|ERROR|MicroSolutions.Task.ImportDataForEmailAlert.UpdateNotificationData|Exception occurred in update notification table task Object reference not set to an instance of an object.
+2018-04-03 21:17:10.1274|ERROR|MicroSolutions.Task.ImportDataForEmailAlert.SendEmail|Exception occurred in Send email task: Object reference not set to an instance of an object.
+2018-04-03 21:17:10.1430|ERROR|MicroSolutions.Task.ImportDataForEmailAlert.UpdateNotificationData|Exception occurred in update notification table task Object reference not set to an instance of an object.

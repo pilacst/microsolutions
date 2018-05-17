@@ -6,6 +6,7 @@
 	Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
+
 <h2>EditPart</h2>
 
 <div class="col-md-12">
@@ -62,12 +63,12 @@
 						</div>
 						<div class="form-group  col-md-12">
 							@Html.LabelFor(model => model.StartingDate)
-							@Html.TextBoxFor(model => model.StartingDate, null, new { @class = "form-control col-md-6", @id = "start-date-value", placeholder = "dd/MM/yyyy"})
+							@Html.TextBoxFor(model => model.StartingDate, null, new { @class = "form-control col-md-6", @placeholder = "dd/MM/yyyy", @id = "start-date-value" })
 							@Html.ValidationMessageFor(model => model.StartingDate)
 						</div>
 						<div class="form-group col-md-12">
 							@Html.LabelFor(model => model.EndDate)
-							@Html.TextBoxFor(model => model.EndDate, null, new { @class = "form-control col-md-6", @id = "end-date-value", placeholder = "dd/MM/yyyy" })
+							@Html.TextBoxFor(model => model.EndDate, null, new { @class = "form-control col-md-6", @id = "end-date-value", @placeholder = "dd/MM/yyyy" })
 							@Html.ValidationMessageFor(model => model.EndDate)
 						</div>
 						<div class="form-group">

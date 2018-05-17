@@ -39,7 +39,6 @@ namespace MicroSolutions.Web.Controllers
 					return RedirectToAction("Index");
 				}
 
-
 				if (Request.Files.Count > 0)
 				{
 					try

@@ -81,8 +81,23 @@ namespace MicroSolutions.Web.Controllers
 					TempData["MessageType"] = "alert-danger";
 					return RedirectToAction("Index");
 				}
-				///Limit
-				var invoiceCount = db.Invoice.ToList().Count;
+
+                if(invoiceVm == null)
+                {
+                    TempData["Message"] = "No invoicess to add.";
+                    TempData["MessageType"] = "alert-danger";
+                    return RedirectToAction("Index");
+                }
+
+                if (invoiceVm.PartsForInvoiceViewModel == null)
+                {
+                    TempData["Message"] = "No parts availabble for the invoice to add.";
+                    TempData["MessageType"] = "alert-danger";
+                    return RedirectToAction("Index");
+                }
+
+                ///Limit
+                var invoiceCount = db.Invoice.ToList().Count;
 				if(invoiceCount > 50)
 				{
 					TempData["Message"] = "This is a trial version. Please contact developer.";
@@ -96,21 +111,32 @@ namespace MicroSolutions.Web.Controllers
 				invoiceModel.InvoiceDate = DateTime.ParseExact(invoiceVm.InvoiceDate, "dd/MM/yyyy", CultureInfo.InvariantCulture);
 				invoiceModel.InvoiceNumber = invoiceVm.InvoiceNumber;
 
-				if (invoiceVm.PartsForInvoiceViewModel != null && invoiceVm.PartsForInvoiceViewModel.Count > 0)
-				{
-					foreach (var item in invoiceVm.PartsForInvoiceViewModel)
-					{
-						var partForInvoice = new PartsForInvoice();
-						partForInvoice.Id = Guid.NewGuid().ToString();
-						partForInvoice.Description = item.Description;
-						partForInvoice.EndDate = DateTime.ParseExact(item.EndDate, "dd/MM/yyyy", CultureInfo.InvariantCulture);
+                if (invoiceVm.PartsForInvoiceViewModel.Count > 0)
+                {
+                    var count = 0;
+                    foreach (var item in invoiceVm.PartsForInvoiceViewModel)
+                    {
+
+                        if (count == 0)
+                        {
+                            count = count + 1;
+                            continue;
+                        }
+
+                        var partForInvoice = new PartsForInvoice();
+                        partForInvoice.Id = Guid.NewGuid().ToString();
+                        partForInvoice.Description = item.Description;
+                        var endDate = (string.IsNullOrEmpty(item.EndDate) || string.IsNullOrWhiteSpace(item.EndDate)) ? DateTime.Now.AddYears(20).ToString() : item.EndDate;
+                        var startingDate = (string.IsNullOrEmpty(item.StartingDate) || string.IsNullOrWhiteSpace(item.StartingDate)) ? DateTime.Now.AddYears(20).ToString() : item.StartingDate;
+
+                        partForInvoice.EndDate = DateTime.ParseExact(endDate, "dd/MM/yyyy", CultureInfo.InvariantCulture);
 						partForInvoice.ExpirationPeriodId = item.ExpirationPeriodId;
 						partForInvoice.ItemTypeId = item.ItemTypeId;
 						partForInvoice.PartNumber = item.PartNumber;
 						partForInvoice.Quantity = item.Quantity;
 						partForInvoice.SerialNumber = item.SerialNumber;
 						partForInvoice.SupplierId = item.SupplierId;
-						partForInvoice.StartingDate = DateTime.ParseExact(item.StartingDate, "dd/MM/yyyy", CultureInfo.InvariantCulture);
+						partForInvoice.StartingDate = DateTime.ParseExact(startingDate, "dd/MM/yyyy", CultureInfo.InvariantCulture);
 						partForInvoice.VendorId = item.VendorId;
 						partForInvoice.Status = true;
 						partForInvoice.UserName = WebSecurity.CurrentUserName;
@@ -152,6 +178,10 @@ namespace MicroSolutions.Web.Controllers
 				var partForInvoiceVm = new PartsForInvoiceViewModel();
 
 				var invoice = db.Invoice.ToList().Find(inv => inv.Id == Id);
+
+                if (invoice == null)
+                    return RedirectToAction("Index");
+
 				invoiceVm.Customer = new Customer();
 				invoiceVm.Customer = db.Customer.ToList().Find(cus => cus.Id == invoice.CustomerId);
 				invoiceVm.InvoiceDate = invoice.InvoiceDate.ToString("dd/MM/yyyy");
@@ -172,10 +202,25 @@ namespace MicroSolutions.Web.Controllers
 		{
 			try
 			{
-				var invoice = new Invoice();
+                if(invoiceVm == null)
+                {
+                    TempData["Message"] = "Failure edit invoice. Data is empty";
+                    TempData["MessageType"] = "alert-danger";
+                    return RedirectToAction("Index");
+                }
+
 				if (ModelState.IsValid)
 				{
-					invoice.Id = invoiceVm.Id;
+                    var invoice = db.Invoice.Where(m=>m.Id == invoiceVm.Id).FirstOrDefault();
+
+                    if (invoice == null)
+                    {
+                        TempData["Message"] = "Can not find invoice, Please re check if the invoice is valid.";
+                        TempData["MessageType"] = "alert-danger";
+                        return RedirectToAction("Index");
+                    }
+
+                    invoice.Id = invoiceVm.Id;
 					invoice.CustomerId = invoiceVm.Customer.Id;
 					invoice.InvoiceDate = DateTime.ParseExact(invoiceVm.InvoiceDate, "dd/MM/yyyy", CultureInfo.InvariantCulture);
 					invoice.InvoiceNumber = invoiceVm.InvoiceNumber;

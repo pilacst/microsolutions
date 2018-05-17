@@ -18,6 +18,7 @@ namespace MicroSolutions.Web.Controllers
 		private MicroSolutionsContext db = new MicroSolutionsContext();
 
 		// GET: Customer
+        [HttpGet]
 		public ActionResult Index()
         {
 			try
@@ -99,7 +100,15 @@ namespace MicroSolutions.Web.Controllers
 			try
 			{
 				var customerToUpdate = db.Customer.ToList().Where(c => c.Id == id).FirstOrDefault();
-				var customerVM = new CustomerViewModel();
+                var customerVM = new CustomerViewModel();
+
+                if (customerToUpdate == null)
+                {
+                    TempData["Message"] = "Customer does not exist.";
+                    TempData["MessageType"] = "alert-danger";
+                    return RedirectToAction("Index");
+                }
+				
 				customerVM.CustomerName = customerToUpdate.CustomerName;
 				customerVM.ContactPersonName = customerToUpdate.ContactPersonName;
 				customerVM.ContactNumber = customerToUpdate.ContactNumber;

@@ -53,31 +53,43 @@
 							<br />
 						</div>
 						<div class="form-group">
-							<table width="100%" class="table table-striped table-bordered table-hover" id="invoice-parts">
-								<thead>
-									<tr>
-										<th>Item type</th>
-										<th>Part numbers</th>
-										<th>Vendor</th>
-										<th>Serial number</th>
-										<th>Quantity</th>
-										<th>Supplier</th>
-										<th>Description</th>
-										<th>Expiration period</th>
-										<th>Starting date</th>
-										<th>End dates</th>
-										<th></th>
-									</tr>
-								</thead>
-								<tbody>
-									@*<tr class="odd gradeX"></tr>*@
-								</tbody>
-							</table>
+                            <table width="100%" class="table table-striped table-bordered table-hover" id="invoice-parts">
+                                <thead>
+                                    <tr>
+                                        <th>Item type</th>
+                                        <th>Part numbers</th>
+                                        <th>Vendor</th>
+                                        <th>Serial number</th>
+                                        <th>Quantity</th>
+                                        <th>Supplier</th>
+                                        <th>Description</th>
+                                        <th>Expiration period</th>
+                                        <th>Starting date</th>
+                                        <th>End dates</th>
+                                        <th></th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td><input type="hidden" name="PartsForInvoiceViewModel[0].ItemTypeId" value='0'></td>
+                                        <td><input type="hidden" name="PartsForInvoiceViewModel[0].PartNumber" value='itemTypeId'></td>
+                                        <td><input type="hidden" name="PartsForInvoiceViewModel[0].VendorId" value='0'></td>
+                                        <td><input type="hidden" name="PartsForInvoiceViewModel[0].SerialNumber" value='itemTypeId'></td>
+                                        <td><input type="hidden" name="PartsForInvoiceViewModel[0].Quantity" value='0'></td>
+                                        <td><input type="hidden" name="PartsForInvoiceViewModel[0].SupplierId" value='0'></td>
+                                        <td><input type="hidden" name="PartsForInvoiceViewModel[0].Description" value='itemTypeId'></td>
+                                        <td><input type="hidden" name="PartsForInvoiceViewModel[0].ExpirationPeriodId" value='0'></td>
+                                        <td><input type="hidden" name="PartsForInvoiceViewModel[0].StartingDate" value='itemTypeId'></td>
+                                        <td><input type="hidden" name="PartsForInvoiceViewModel[0].EndDate" value='itemTypeId'></td>
+                                        <td><input type="hidden" name="PartsForInvoiceViewModel[0].Status" value='true'></td>
+                                    </tr>
+                                </tbody>
+                            </table>
 						</div>
 
 						<div class="form-group">
 							<div class="col-md-offset-2 col-md-10">
-								<input type="submit" value="Save" class="btn btn-primary pull-right" />
+								<input type="submit" id="save-invoice-button" value="Save" class="btn btn-primary pull-right" />
 							</div>
 						</div>
 					</div>

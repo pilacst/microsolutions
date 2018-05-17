@@ -1,12 +1,11 @@
 ﻿using MicroSolutions.Data.Models;
-using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace MicroSolutions.Web.Models
 {
-	public class InvoiceViewModel
+    public class InvoiceViewModel
 	{
 		public virtual int Id { get; set; }
 
