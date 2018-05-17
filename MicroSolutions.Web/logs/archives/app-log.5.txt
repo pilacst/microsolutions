@@ -1,52 +1,11 @@
-2018-02-08 21:28:14.8105|ERROR|MicroSolutions.Task.ImportDataForEmailAlert.SendEmail|Exception occurred in Send email task: An error occurred while executing the command definition. See the inner exception for details.
-2018-02-08 21:28:14.8455|ERROR|MicroSolutions.Task.ImportDataForEmailAlert.UpdateNotificationData|Exception occurred in update notification table task An error occurred while executing the command definition. See the inner exception for details.
-2018-02-08 21:50:27.8710|ERROR|MicroSolutions.Task.ImportDataForEmailAlert.SendEmail|Exception occurred in Send email task: An error occurred while executing the command definition. See the inner exception for details.
-2018-02-08 21:50:27.8710|ERROR|MicroSolutions.Task.ImportDataForEmailAlert.UpdateNotificationData|Exception occurred in update notification table task An error occurred while executing the command definition. See the inner exception for details.
-2018-02-08 21:55:11.9221|ERROR|MicroSolutions.Task.ImportDataForEmailAlert.UpdateNotificationData|Exception occurred in update notification table task An error occurred while executing the command definition. See the inner exception for details.
-2018-02-08 21:55:11.9221|ERROR|MicroSolutions.Task.ImportDataForEmailAlert.SendEmail|Exception occurred in Send email task: An error occurred while executing the command definition. See the inner exception for details.
-2018-02-08 21:58:07.6943|ERROR|MicroSolutions.Task.ImportDataForEmailAlert.SendEmail|Exception occurred in Send email task: An error occurred while executing the command definition. See the inner exception for details.
-2018-02-08 21:58:07.6943|ERROR|MicroSolutions.Task.ImportDataForEmailAlert.UpdateNotificationData|Exception occurred in update notification table task An error occurred while executing the command definition. See the inner exception for details.
-2018-02-08 21:59:18.8287|ERROR|MicroSolutions.Web.Controllers.InvoiceController|Exception occurred in Invoice -> index: An error occurred while executing the command definition. See the inner exception for details.
-2018-02-08 22:24:28.0594|ERROR|MicroSolutions.Web.Controllers.UploadExcelController|Exception occurred in uploading excelInput string was not in a correct format.
-2018-02-08 22:24:28.1154|ERROR|MicroSolutions.Web.Controllers.UploadExcelController|Exception occurred in uploading excelInput string was not in a correct format.
-2018-02-08 22:24:43.9099|ERROR|MicroSolutions.Web.Controllers.UploadExcelController|Exception occurred in uploading excelInput string was not in a correct format.
-2018-02-08 22:25:39.8367|ERROR|MicroSolutions.Web.Controllers.UploadExcelController|Exception occurred in uploading excelInput string was not in a correct format.
-2018-02-08 22:25:39.8687|ERROR|MicroSolutions.Web.Controllers.UploadExcelController|Exception occurred in uploading excelInput string was not in a correct format.
-2018-02-08 22:25:40.9084|ERROR|MicroSolutions.Web.Controllers.UploadExcelController|Exception occurred in uploading excelInput string was not in a correct format.
-2018-02-08 22:26:50.3867|ERROR|MicroSolutions.Web.Controllers.UploadExcelController|Exception occurred in uploading excelInput string was not in a correct format.
-2018-02-08 22:26:50.4157|ERROR|MicroSolutions.Web.Controllers.UploadExcelController|Exception occurred in uploading excelInput string was not in a correct format.
-2018-02-08 22:26:50.9480|ERROR|MicroSolutions.Web.Controllers.UploadExcelController|Exception occurred in uploading excelInput string was not in a correct format.
-2018-02-08 22:28:32.1186|ERROR|MicroSolutions.Web.Controllers.UploadExcelController|Exception occurred in uploading excelObject reference not set to an instance of an object.
-2018-02-08 22:28:32.1466|ERROR|MicroSolutions.Web.Controllers.UploadExcelController|Exception occurred in uploading excelObject reference not set to an instance of an object.
-2018-02-08 22:28:38.2102|ERROR|MicroSolutions.Web.Controllers.UploadExcelController|Exception occurred in uploading excelObject reference not set to an instance of an object.
-2018-02-08 22:32:59.0059|ERROR|MicroSolutions.Web.Controllers.UploadExcelController|Exception occurred in uploading excelObject reference not set to an instance of an object.
-2018-02-08 22:32:59.0559|ERROR|MicroSolutions.Web.Controllers.UploadExcelController|Exception occurred in uploading excelObject reference not set to an instance of an object.
-2018-02-08 22:33:06.7784|ERROR|MicroSolutions.Web.Controllers.UploadExcelController|Exception occurred in uploading excelObject reference not set to an instance of an object.
-2018-02-08 22:44:55.9180|ERROR|MicroSolutions.Web.Controllers.UploadExcelController|Exception occurred in uploading excelObject reference not set to an instance of an object.
-2018-02-08 22:44:55.9694|ERROR|MicroSolutions.Web.Controllers.UploadExcelController|Exception occurred in uploading excelObject reference not set to an instance of an object.
-2018-02-08 22:45:01.6750|ERROR|MicroSolutions.Web.Controllers.UploadExcelController|Exception occurred in uploading excelObject reference not set to an instance of an object.
-2018-02-08 22:50:43.9121|ERROR|MicroSolutions.Web.Controllers.UploadExcelController|Exception occurred in uploading excelObject reference not set to an instance of an object.
-2018-02-08 22:50:43.9731|ERROR|MicroSolutions.Web.Controllers.UploadExcelController|Exception occurred in uploading excelObject reference not set to an instance of an object.
-2018-02-08 22:50:49.1650|ERROR|MicroSolutions.Web.Controllers.UploadExcelController|Exception occurred in uploading excelObject reference not set to an instance of an object.
-2018-02-08 22:59:36.6898|ERROR|MicroSolutions.Web.Controllers.UploadExcelController|Exception occurred in uploading excelObject reference not set to an instance of an object.
-2018-02-08 22:59:36.7458|ERROR|MicroSolutions.Web.Controllers.UploadExcelController|Exception occurred in uploading excelObject reference not set to an instance of an object.
-2018-02-08 22:59:40.8399|ERROR|MicroSolutions.Web.Controllers.UploadExcelController|Exception occurred in uploading excelObject reference not set to an instance of an object.
-2018-02-08 23:12:17.3193|ERROR|MicroSolutions.Web.Controllers.UploadExcelController|Exception occurred in uploading excelInput string was not in a correct format.
-2018-02-08 23:12:17.3773|ERROR|MicroSolutions.Web.Controllers.UploadExcelController|Exception occurred in uploading excelInput string was not in a correct format.
-2018-02-08 23:12:19.3658|ERROR|MicroSolutions.Web.Controllers.UploadExcelController|Exception occurred in uploading excelInput string was not in a correct format.
-2018-02-08 23:16:31.7189|ERROR|MicroSolutions.Web.Controllers.UploadExcelController|Exception occurred in uploading excelObject reference not set to an instance of an object.
-2018-02-08 23:16:31.7889|ERROR|MicroSolutions.Web.Controllers.UploadExcelController|Exception occurred in uploading excelObject reference not set to an instance of an object.
-2018-02-08 23:16:34.4292|ERROR|MicroSolutions.Web.Controllers.UploadExcelController|Exception occurred in uploading excelObject reference not set to an instance of an object.
-2018-02-08 23:18:12.1540|ERROR|MicroSolutions.Web.Controllers.UploadExcelController|Exception occurred in uploading excelObject reference not set to an instance of an object.
-2018-02-08 23:18:12.1820|ERROR|MicroSolutions.Web.Controllers.UploadExcelController|Exception occurred in uploading excelObject reference not set to an instance of an object.
-2018-02-08 23:18:13.3360|ERROR|MicroSolutions.Web.Controllers.UploadExcelController|Exception occurred in uploading excelObject reference not set to an instance of an object.
-2018-02-08 23:18:25.4296|ERROR|MicroSolutions.Web.Controllers.UploadExcelController|Exception occurred in uploading excelObject reference not set to an instance of an object.
-2018-02-08 23:18:25.4586|ERROR|MicroSolutions.Web.Controllers.UploadExcelController|Exception occurred in uploading excelObject reference not set to an instance of an object.
-2018-02-08 23:23:07.9476|ERROR|MicroSolutions.Web.Controllers.UploadExcelController|Exception occurred in uploading excelObject reference not set to an instance of an object.
-2018-02-08 23:23:08.0091|ERROR|MicroSolutions.Web.Controllers.UploadExcelController|Exception occurred in uploading excelObject reference not set to an instance of an object.
-2018-02-08 23:23:08.0496|ERROR|MicroSolutions.Web.Controllers.UploadExcelController|Exception occurred in uploading excelObject reference not set to an instance of an object.
-2018-02-08 23:23:14.5845|ERROR|MicroSolutions.Web.Controllers.UploadExcelController|Exception occurred in uploading excelObject reference not set to an instance of an object.
-2018-02-08 23:23:54.2150|ERROR|MicroSolutions.Web.Controllers.UploadExcelController|Exception occurred in uploading excelObject reference not set to an instance of an object.
-2018-02-08 23:23:54.2450|ERROR|MicroSolutions.Web.Controllers.UploadExcelController|Exception occurred in uploading excelObject reference not set to an instance of an object.
-2018-02-08 23:23:54.2735|ERROR|MicroSolutions.Web.Controllers.UploadExcelController|Exception occurred in uploading excelObject reference not set to an instance of an object.
-2018-02-08 23:23:55.1779|ERROR|MicroSolutions.Web.Controllers.UploadExcelController|Exception occurred in uploading excelObject reference not set to an instance of an object.
+2018-02-09 13:52:26.8592|ERROR|MicroSolutions.Task.ImportDataForEmailAlert.UpdateNotificationData|Exception occurred in update notification table task String was not recognized as a valid DateTime.
+2018-02-09 13:59:04.4811|ERROR|MicroSolutions.Task.ImportDataForEmailAlert.UpdateNotificationData|Exception occurred in update notification table task String was not recognized as a valid DateTime.
+2018-02-09 14:09:45.4946|ERROR|MicroSolutions.Task.ImportDataForEmailAlert.UpdateNotificationData|Exception occurred in update notification table task An error occurred while updating the entries. See the inner exception for details.
+2018-02-09 14:11:54.5777|ERROR|MicroSolutions.Task.ImportDataForEmailAlert.UpdateNotificationData|Exception occurred in update notification table task An error occurred while updating the entries. See the inner exception for details.
+2018-02-09 14:45:45.4629|ERROR|MicroSolutions.Task.ImportDataForEmailAlert.SendEmail|Exception occurred in send email task The SMTP server requires a secure connection or the client was not authenticated. The server response was: 5.5.1 Authentication Required. Learn more at
+2018-02-09 14:45:52.2371|ERROR|MicroSolutions.Task.ImportDataForEmailAlert.SendEmail|Exception occurred in Send email task: The SMTP server requires a secure connection or the client was not authenticated. The server response was: 5.5.1 Authentication Required. Learn more at
+2018-02-09 14:46:42.6044|ERROR|MicroSolutions.Task.ImportDataForEmailAlert.SendEmail|Exception occurred in send email task The SMTP server requires a secure connection or the client was not authenticated. The server response was: 5.5.1 Authentication Required. Learn more at
+2018-02-09 14:46:43.4017|ERROR|MicroSolutions.Task.ImportDataForEmailAlert.SendEmail|Exception occurred in Send email task: The SMTP server requires a secure connection or the client was not authenticated. The server response was: 5.5.1 Authentication Required. Learn more at
+2018-02-09 14:47:58.4494|ERROR|MicroSolutions.Task.ImportDataForEmailAlert.SendEmail|Exception occurred in Send email task: Saving or accepting changes failed because more than one entity of type 'MicroSolutions.Data.Models.Notification' have the same primary key value. Ensure that explicitly set primary key values are unique. Ensure that database-generated primary keys are configured correctly in the database and in the Entity Framework model. Use the Entity Designer for Database First/Model First configuration. Use the 'HasDatabaseGeneratedOption" fluent API or 'DatabaseGeneratedAttribute' for Code First configuration.
+2018-02-09 22:43:13.2296|ERROR|MicroSolutions.Web.Controllers.InvoiceController|Exception occurred in Invoice -> EditPart[HttpPost]: An error occurred while updating the entries. See the inner exception for details.
+2018-02-09 22:46:04.1223|ERROR|MicroSolutions.Web.Controllers.InvoiceController|Exception occurred in Invoice -> EditPart[HttpPost]: An error occurred while updating the entries. See the inner exception for details.

@@ -126,8 +126,8 @@ namespace MicroSolutions.Web.Controllers
                         var partForInvoice = new PartsForInvoice();
                         partForInvoice.Id = Guid.NewGuid().ToString();
                         partForInvoice.Description = item.Description;
-                        var endDate = (string.IsNullOrEmpty(item.EndDate) || string.IsNullOrWhiteSpace(item.EndDate)) ? DateTime.Now.AddYears(20).ToString() : item.EndDate;
-                        var startingDate = (string.IsNullOrEmpty(item.StartingDate) || string.IsNullOrWhiteSpace(item.StartingDate)) ? DateTime.Now.AddYears(20).ToString() : item.StartingDate;
+                        var endDate = (string.IsNullOrEmpty(item.EndDate) || string.IsNullOrWhiteSpace(item.EndDate)) ? DateTime.Now.AddYears(20).ToString("dd/MM/yyyy") : item.EndDate;
+                        var startingDate = (string.IsNullOrEmpty(item.StartingDate) || string.IsNullOrWhiteSpace(item.StartingDate)) ? DateTime.Now.AddYears(20).ToString("dd/MM/yyyy") : item.StartingDate;
 
                         partForInvoice.EndDate = DateTime.ParseExact(endDate, "dd/MM/yyyy", CultureInfo.InvariantCulture);
 						partForInvoice.ExpirationPeriodId = item.ExpirationPeriodId;

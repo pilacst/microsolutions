@@ -42,7 +42,8 @@
 		'<td><input type="hidden" name="PartsForInvoiceViewModel[' + availableNumberOfPaers + '].EndDate" value=' + endDate + '>' + endDate + '</td>' +
 		'<td><input type="hidden" name="PartsForInvoiceViewModel[' + availableNumberOfPaers + '].Status" value="true" ><input type="hidden" name="PartsForInvoiceViewModel[' + availableNumberOfPaers + '].IsNew" value="true" ><i class="fa fa-times" aria-hidden="true" onclick="RemoveRowFromTable(' + availableNumberOfPaers+');"></i></td>' +
 		'</tr>';
-	$('#invoice-parts tr:last').after(row);
+    $('#invoice-parts tr:last').after(row);
+    $('#add-parts-for-invoice-modal').modal('hide');
 }
 
 function RemoveRowFromTable(rowNumber) {
