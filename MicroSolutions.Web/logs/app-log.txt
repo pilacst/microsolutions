@@ -1,2 +1,3 @@
-2018-05-17 22:46:35.3619|ERROR|MicroSolutions.Web.Controllers.InvoiceController|Exception occurred in Invoice -> Add[HTTPPOST]: String was not recognized as a valid DateTime.
-2018-05-17 22:54:21.1553|ERROR|MicroSolutions.Web.Controllers.InvoiceController|Exception occurred in Invoice -> Add[HTTPPOST]: String was not recognized as a valid DateTime.
+2018-05-19 19:23:12.7788|ERROR|MicroSolutions.Web.Controllers.UploadExcelController|Exception occurred in uploading excel row Id : 2 : Index was outside the bounds of the array.
+2018-05-19 19:23:12.8237|ERROR|MicroSolutions.Web.Controllers.UploadExcelController|Exception occurred in uploading excelIndex was outside the bounds of the array.
+2018-05-19 19:23:12.8427|ERROR|MicroSolutions.Web.Controllers.UploadExcelController|Exception occurred in uploading excelIndex was outside the bounds of the array.

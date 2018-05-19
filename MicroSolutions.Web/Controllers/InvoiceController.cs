@@ -96,16 +96,24 @@ namespace MicroSolutions.Web.Controllers
                     return RedirectToAction("Index");
                 }
 
-                ///Limit
-                var invoiceCount = db.Invoice.ToList().Count;
-				if(invoiceCount > 50)
-				{
-					TempData["Message"] = "This is a trial version. Please contact developer.";
-					TempData["MessageType"] = "alert-danger";
-					return RedirectToAction("Index");
-				}
+                if (string.IsNullOrEmpty(invoiceVm.InvoiceDate) || string.IsNullOrWhiteSpace(invoiceVm.InvoiceDate))
+                {
+                    TempData["Message"] = "Invoice date is mandatory.";
+                    TempData["MessageType"] = "alert-danger";
+                    return RedirectToAction("Index");
+                }
 
-				var invoiceModel = new Invoice();
+                var isInvoiceExist = db.Invoice.ToList().Where(inv => inv.Status == true && inv.InvoiceNumber == invoiceVm.InvoiceNumber).ToList().Count;
+
+                if (isInvoiceExist > 0)
+                {
+                    TempData["Message"] = "Invoice with same number already exist in the system. The invoice number is : " + invoiceVm.InvoiceNumber;
+                    TempData["MessageType"] = "alert-danger";
+                    return RedirectToAction("Index");
+                }
+
+
+                var invoiceModel = new Invoice();
 				var partForInvoiceList = new List<PartsForInvoice>();
 				invoiceModel.CustomerId = invoiceVm.Customer.Id;
 				invoiceModel.InvoiceDate = DateTime.ParseExact(invoiceVm.InvoiceDate, "dd/MM/yyyy", CultureInfo.InvariantCulture);
