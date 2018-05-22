@@ -23,7 +23,7 @@ namespace MicroSolutions.Task.ImportDataForEmailAlert
 				string password = emailConfiguration.FromEmailPassword; //"3139808@pila";
 
 				string emailFrom = emailConfiguration.FromEmail; //"nayanajith.pilapitiya@gmail.com";
-				string emailTo = emailConfiguration.ToEmail.ToString();
+				var emailToList = emailConfiguration.ToEmail.Split(';');
 				int portNumber = emailConfiguration.PortNumber; //587;
 				string StrContent = "";
 				string filePath = Path.Combine(HostingEnvironment.ApplicationPhysicalPath, "Content/files/email_template.html");
@@ -60,7 +60,12 @@ namespace MicroSolutions.Task.ImportDataForEmailAlert
 					mail.Subject = "Expiration system alert"; //subject;
 					mail.Body = StrContent;
 					mail.IsBodyHtml = true;
-					mail.To.Add(emailTo);
+
+                    foreach (var item in emailToList)
+                    {
+                        mail.To.Add(item.ToString());
+                    }
+					
 
 					using (SmtpClient smtp = new SmtpClient(smtpAddress, portNumber))
 					{
