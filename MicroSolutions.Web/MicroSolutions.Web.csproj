@@ -313,6 +313,7 @@
     <Content Include="Content\vendor\raphael\raphael.js" />
     <Content Include="Content\vendor\raphael\raphael.min.js" />
     <Content Include="DB\Customer-Insert-Script.txt" />
+    <Content Include="DB\Vendor-Insert-Script.txt" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
