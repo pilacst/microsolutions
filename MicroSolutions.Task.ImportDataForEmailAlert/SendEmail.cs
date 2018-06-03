@@ -20,7 +20,7 @@ namespace MicroSolutions.Task.ImportDataForEmailAlert
 			{
 				var emailConfiguration = db.EmailSettings.ToList().FirstOrDefault();
 				string smtpAddress = emailConfiguration.SmtpAddress;//"smtp.gmail.com";
-				string password = emailConfiguration.FromEmailPassword; //"3139808@pila";
+				string password = emailConfiguration.FromEmailPassword;
 
 				string emailFrom = emailConfiguration.FromEmail; //"nayanajith.pilapitiya@gmail.com";
 				var emailToList = emailConfiguration.ToEmail.Split(';');
